@@ -6,7 +6,6 @@ import javax.swing.JLabel
 import javax.swing.JScrollPane
 import javax.swing.SwingConstants.CENTER
 
-
 fun main(args: Array<String>) {
     with (JFrame("Product popularity")) {
         setSize(600, 600)

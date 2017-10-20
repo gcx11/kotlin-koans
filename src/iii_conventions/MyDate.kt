@@ -1,6 +1,6 @@
 package iii_conventions
 
-data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int): Comparable<MyDate> {
+data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) : Comparable<MyDate> {
     override operator fun compareTo(other: MyDate): Int {
         return if (year == other.year && month == other.month && dayOfMonth == other.dayOfMonth) 0
         else if (year > other.year || (year == other.year && month > other.month) ||
@@ -37,7 +37,7 @@ class DateRange(val start: MyDate, val endInclusive: MyDate) {
     }
 
     operator fun iterator(): Iterator<MyDate> {
-        return object: Iterator<MyDate>{
+        return object : Iterator<MyDate> {
             var currentDay: MyDate = start
 
             override fun next(): MyDate {

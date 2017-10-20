@@ -20,5 +20,3 @@ fun task36(): List<Boolean> {
     return listOf(42.isOdd(), 239.isOdd(), 294823098.isEven())
 }
 
-
-

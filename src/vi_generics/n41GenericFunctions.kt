@@ -19,7 +19,7 @@ fun task41(): Nothing = TODO(
         }
 )
 
-fun <T, C: MutableCollection<in T>> Collection<T>.partitionTo(c1: C, c2: C, l: (T) -> Boolean): Pair<C, C>{
+fun <T, C : MutableCollection<in T>> Collection<T>.partitionTo(c1: C, c2: C, l: (T) -> Boolean): Pair<C, C> {
     this.filterTo(c1) { l(it) }
     this.filterNotTo(c2) { l(it) }
     return Pair(c1, c2)
@@ -30,5 +30,5 @@ fun List<String>.partitionWordsAndLines(): Pair<List<String>, List<String>> {
 }
 
 fun Set<Char>.partitionLettersAndOtherSymbols(): Pair<Set<Char>, Set<Char>> {
-    return partitionTo(HashSet<Char>(), HashSet()) { c -> c in 'a'..'z' || c in 'A'..'Z'}
+    return partitionTo(HashSet<Char>(), HashSet()) { c -> c in 'a'..'z' || c in 'A'..'Z' }
 }

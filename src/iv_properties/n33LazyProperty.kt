@@ -5,8 +5,8 @@ import util.TODO
 class LazyProperty(val initializer: () -> Int) {
     private var initialized: Boolean = false
     var lazy: Int = 0
-        get(){
-            if (!initialized){
+        get() {
+            if (!initialized) {
                 field = initializer()
                 initialized = true
             }

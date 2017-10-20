@@ -16,4 +16,3 @@ data class City(val name: String) {
     override fun toString() = name
 }
 
-

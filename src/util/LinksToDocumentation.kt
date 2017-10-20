@@ -10,7 +10,6 @@ fun doc0() {}
  */
 fun doc2() {}
 
-
 /**
  * @see <a href="https://kotlinlang.org/docs/reference/lambdas.html">Lambdas</a>
  */

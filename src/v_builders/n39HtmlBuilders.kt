@@ -6,7 +6,7 @@ import v_builders.data.getProducts
 import v_builders.htmlLibrary.*
 
 fun getTitleColor() = "#b9c9fe"
-fun getCellColor(row: Int, column: Int) = if ((row + column) %2 == 0) "#dce4ff" else "#eff2ff"
+fun getCellColor(row: Int, column: Int) = if ((row + column) % 2 == 0) "#dce4ff" else "#eff2ff"
 
 fun todoTask39(): Nothing = TODO(
     """
@@ -34,7 +34,7 @@ fun renderProductTable(): String {
                 }
             }
             val products = getProducts()
-            for ((index, product) in products.withIndex()){
+            for ((index, product) in products.withIndex()) {
                 tr(getTitleColor()) {
                     td(getCellColor(index, 0)) {
                         text(product.description)

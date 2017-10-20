@@ -5,7 +5,7 @@ import util.TODO
 class Invokable {
     var invokedCount: Int = 0
 
-    operator fun invoke(): Invokable{
+    operator fun invoke(): Invokable {
         invokedCount += 1
         return this
     }

@@ -10,12 +10,11 @@ fun example1(list: List<Int>) {
 
 fun Shop.getCitiesCustomersAreFrom(): Set<City> {
     // Return the set of cities the customers are from
-    return HashSet<City>(this.customers.map{it.city})
+    return HashSet<City>(this.customers.map { it.city })
 }
 
 fun Shop.getCustomersFrom(city: City): List<Customer> {
     // Return a list of the customers who live in the given city
-    return this.customers.filter{it.city == city}.toList()
+    return this.customers.filter { it.city == city }.toList()
 }
-
 

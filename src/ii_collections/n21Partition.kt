@@ -13,7 +13,7 @@ fun example8() {
 fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> {
     // Return customers who have more undelivered orders than delivered
     val customersWithMoreUndelivered = HashSet<Customer>()
-    for (customer in this.customers){
+    for (customer in this.customers) {
         val (delivered, undelivered) = customer.orders.partition { it.isDelivered }
         if (delivered.count() < undelivered.count()) customersWithMoreUndelivered.add(customer)
     }

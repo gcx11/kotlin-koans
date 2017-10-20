@@ -20,7 +20,7 @@ fun buildStringExample(): String {
     }
 }
 
-fun <K, V> buildMap(build: HashMap<K, V>.() -> Unit): HashMap<K, V>{
+fun <K, V> buildMap(build: HashMap<K, V>.() -> Unit): HashMap<K, V> {
     val mapBuilder = HashMap<K, V>()
     mapBuilder.build()
     return mapBuilder
